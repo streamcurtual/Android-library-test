@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.test.testmvvm"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar', '*.zip'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.alibaba:fastjson:1.1.56.android'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+//    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+//    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+//    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.easing:library:1.0.0@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.2@aar'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+    implementation ('net.sourceforge.jexcelapi:jxl:2.6.12'){
+        exclude module:'log4j'
+    }
+    implementation 'com.wuyr:pathlayoutmanager:1.0.1'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    implementation 'com.github.sdfdzx:VRShow:v1.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation project(path: ':pluginlib')
+
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="315dp"
+    android:layout_height="269.4dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/active_line"
+        />
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="600px"
+        android:layout_height="548.9px"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/img_corner"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:alpha="0.5"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/shadow"
+            />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="aaaaa"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="bbbbb"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/lav_check"
+        android:focusable="false"
+        android:layout_width="315dp"
+        android:layout_height="269.4dp"
+        android:background="@drawable/check_bg"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/check"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="102dp"
+            android:id="@+id/iv_check"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约成功！"
+            android:layout_below="@+id/iv_check"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="137.5dp"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:id="@+id/tv_check"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
